@@ -6,9 +6,9 @@ public class YatzyTest {
     @Test
     public void chance_scores_sum_of_all_dice() {
         int expected = 15;
-        int actual = Yatzy.chance(2,3,4,5,1);
+        int actual = Yatzy.chance(new Roll(2,3,4,5,1));
         assertEquals(expected, actual);
-        assertEquals(16, Yatzy.chance(3,3,4,5,1));
+        assertEquals(16, Yatzy.chance(new Roll(3,3,4,5,1)));
     }
 
     @Test public void yatzy_scores_50() {
@@ -19,45 +19,46 @@ public class YatzyTest {
         assertEquals(0, Yatzy.yatzy(6,6,6,6,3));
     }
 
-    @Test public void test_1s() {
-        assertTrue(Yatzy.ones(1,2,3,4,5) == 1);
-        assertEquals(2, Yatzy.ones(1,2,1,4,5));
-        assertEquals(0, Yatzy.ones(6,2,2,4,5));
-        assertEquals(4, Yatzy.ones(1,2,1,1,1));
+    @Test public void onesTest() {
+        assertTrue(Yatzy.sumOfEyes(1,new Roll(1,2,3,4,5)) == 1);
+        assertEquals(2, Yatzy.sumOfEyes(1,new Roll(1,2,1,4,5)));
+        assertEquals(0, Yatzy.sumOfEyes(1,new Roll(6,2,2,4,5)));
+        assertEquals(4, Yatzy.sumOfEyes(1,new Roll(1,2,1,1,1)));
     }
 
     @Test
-    public void test_2s() {
-        assertEquals(4, Yatzy.twos(1,2,3,2,6));
-        assertEquals(10, Yatzy.twos(2,2,2,2,2));
+    public void twosTest() {
+        assertEquals(4, Yatzy.sumOfEyes(2,new Roll(1,2,3,2,6)));
+        assertEquals(10, Yatzy.sumOfEyes(2,new Roll(2,2,2,2,2)));
     }
 
     @Test
-    public void test_threes() {
-        assertEquals(6, Yatzy.threes(1,2,3,2,3));
-        assertEquals(12, Yatzy.threes(2,3,3,3,3));
+    public void threesTest() {
+        assertEquals(6, Yatzy.sumOfEyes(3,new Roll(1,2,3,2,3)));
+        assertEquals(12, Yatzy.sumOfEyes(3,new Roll(2,3,3,3,3)));
     }
 
     @Test
-    public void fours_test() 
+    public void foursTest() 
     {
-        assertEquals(12, new Yatzy(4,4,4,5,5).fours());
-        assertEquals(8, new Yatzy(4,4,5,5,5).fours());
-        assertEquals(4, new Yatzy(4,5,5,5,5).fours());
+        assertEquals(12, Yatzy.sumOfEyes(4,new Roll(4,4,4,5,5)));
+        assertEquals(8, Yatzy.sumOfEyes(4,new Roll(4,4,5,5,5)));
+        assertEquals(4, Yatzy.sumOfEyes(4,new Roll(4,5,5,5,5)));
+
     }
 
     @Test
-    public void fives() {
-        assertEquals(10, new Yatzy(4,4,4,5,5).fives());
-        assertEquals(15, new Yatzy(4,4,5,5,5).fives());
-        assertEquals(20, new Yatzy(4,5,5,5,5).fives());
+    public void fivesTest() {
+        assertEquals(10, Yatzy.sumOfEyes(5,new Roll(4,4,4,5,5)));
+        assertEquals(15, Yatzy.sumOfEyes(5,new Roll(4,4,5,5,5)));
+        assertEquals(20, Yatzy.sumOfEyes(5,new Roll(4,5,5,5,5)));
     }
 
     @Test
-    public void sixes_test() {
-        assertEquals(0, new Yatzy(4,4,4,5,5).sixes());
-        assertEquals(6, new Yatzy(4,4,6,5,5).sixes());
-        assertEquals(18, new Yatzy(6,5,6,6,5).sixes());
+    public void sixesTest() {
+        assertEquals(0, Yatzy.sumOfEyes(6, new Roll(4,4,4,5,5)));
+        assertEquals(6, Yatzy.sumOfEyes(6, new Roll(4,4,6,5,5)));
+        assertEquals(18, Yatzy.sumOfEyes(6, new Roll(6,5,6,6,5)));
     }
 
     @Test

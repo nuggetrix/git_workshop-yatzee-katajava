@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="YatzyTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2017-09-07T10:10:55" hostname="XP-AS189" time="0.012">
+  <properties/>
+  <testcase name="chance_scores_sum_of_all_dice" classname="YatzyTest" time="0.004"/>
+  <testcase name="fullHouse" classname="YatzyTest" time="0.0"/>
+  <testcase name="sixesTest" classname="YatzyTest" time="0.001"/>
+  <testcase name="threesTest" classname="YatzyTest" time="0.001"/>
+  <testcase name="fivesTest" classname="YatzyTest" time="0.001"/>
+  <testcase name="smallStraight" classname="YatzyTest" time="0.0"/>
+  <testcase name="four_of_a_knd" classname="YatzyTest" time="0.0"/>
+  <testcase name="largeStraight" classname="YatzyTest" time="0.0"/>
+  <testcase name="foursTest" classname="YatzyTest" time="0.001"/>
+  <testcase name="three_of_a_kind" classname="YatzyTest" time="0.0"/>
+  <testcase name="yatzy_scores_50" classname="YatzyTest" time="0.0"/>
+  <testcase name="two_Pair" classname="YatzyTest" time="0.0"/>
+  <testcase name="twosTest" classname="YatzyTest" time="0.001"/>
+  <testcase name="one_pair" classname="YatzyTest" time="0.001"/>
+  <testcase name="onesTest" classname="YatzyTest" time="0.001"/>
+  <system-out><![CDATA[
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
